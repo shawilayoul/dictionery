@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+    flex-direction: column;
+    background: linear-gradient(130deg,
+            purple 30%,
+            orange 80%);
+}
+
+.container {
+    background-color: lavenderblush;
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 35px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    position: relative;
+    margin-bottom: 40px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, .5),
+        -6px -6px 10px rgba(255, 255, 255, .7);
+    transition: width 4s;
+}
+
+
+.search-icon {
+    cursor: pointer;
+    position: absolute;
+    width: 35px;
+    left: 8px;
+}
+
+.mic {
+    position: absolute;
+    width: 30px;
+    right: 20px;
+    transition: width 2s;
+    transition-delay: 1s;
+}
+
+.input {
+    position: absolute;
+    left: 50px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+}
+
+.active.container {
+    width: 0;
+}
+
+.active .input {
+    width: 0;
+}
+
+.active .mic {
+    width: 0;
+}
+
+.menu-container {
+    width: 40%;
+    height: 500px;
+    overflow: hidden;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.menu {
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+
+.menu img {
+    width: 30px;
+
+}
+
+.menu span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list {
+    background-color: lemonchiffon;
+    height: 350px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    transition: padding .5s ease-in;
+}
+
+.list li:hover {
+    background-color: lightgray;
+    border-radius: 6px;
+    padding: 13px;
+}
+
+.list li img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.rotate.angle {
+    transform: rotate(180deg);
+}
